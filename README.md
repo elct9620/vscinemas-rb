@@ -1,8 +1,8 @@
-# Vscinemas
+# VSCinemas
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vscinemas`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a crawler gem for VSCinemas (威秀影城).
 
-TODO: Delete this and the text above, and describe your gem
+:warning:Use crawler have legal risk, please make sure you are know what are you doing:warning:
 
 ## Installation
 
@@ -22,7 +22,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Get Playing Movies
+
+```ruby
+movies = VSCinemas.movies
+movies.each do |movie|
+  puts "Title: #{movie.title}"
+  puts "Release Date: #{movie.date}"
+end
+```
+
+### Specify Page
+
+```ruby
+movies = VSCinemas::MovieList.new(page: 2)
+movies.each do |movie|
+  puts "Title: #{movie.title}"
+end
+```
+
+## Roadmap
+
+* [x] Playing Movies
+* [ ] Coming Movies
+* [ ] Movie Detail
+  * [ ] Description
+  * [ ] Playing Version
+  * [ ] Theaters
 
 ## Development
 
@@ -32,8 +58,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/vscinemas. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/vscinemas/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/elct9620/vscinemas-rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/elct9620/vscinemas/blob/main/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
-Everyone interacting in the Vscinemas project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/vscinemas/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Vscinemas project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/elct9620/vscinemas-rb/blob/main/CODE_OF_CONDUCT.md).

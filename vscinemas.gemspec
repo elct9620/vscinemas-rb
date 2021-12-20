@@ -10,11 +10,11 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'The Taiwan VSCinema crawler to get latest film list.'
   spec.description = 'The Taiwan VSCinema crawler to get latest film list.'
-  spec.homepage = 'https://github.com/elct9620/vscinemas'
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.homepage = 'https://github.com/elct9620/vscinemas-rb'
+  spec.required_ruby_version = '>= 2.5.0'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/elct9620/vscinemas'
+  spec.metadata['source_code_uri'] = 'https://github.com/elct9620/vscinemas-rb'
   # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
 
   # Specify which files should be added to the gem when it is released.
@@ -33,4 +33,7 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
+  spec.metadata = {
+    'rubygems_mfa_required' => 'true'
+  }
 end
