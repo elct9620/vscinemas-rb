@@ -12,6 +12,11 @@ module VSCinemas
   # @since 0.1.0
   ENDPOINT = 'https://www.vscinemas.com.tw'
 
+  # TODO: Remove PATH dependency
+  #
+  # @since 0.1.0
+  PATH = '/vsweb/film/index.aspx'
+
   require_relative 'vscinemas/movie_item'
   require_relative 'vscinemas/movie_list'
 
