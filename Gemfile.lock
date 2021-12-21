@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vscinemas (0.1.0)
+    vscinemas (0.2.0)
       nokogiri
 
 GEM
@@ -21,8 +21,6 @@ GEM
     hashdiff (1.0.1)
     iniparse (1.5.0)
     nokogiri (1.12.5-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     overcommit (0.58.0)
       childprocess (>= 0.6.3, < 5)

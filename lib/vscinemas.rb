@@ -12,9 +12,6 @@ module VSCinemas
   # @since 0.1.0
   ENDPOINT = 'https://www.vscinemas.com.tw'
 
-  # @since 0.1.0
-  PATH = '/vsweb/film/index.aspx'
-
   require_relative 'vscinemas/movie_item'
   require_relative 'vscinemas/movie_list'
 
@@ -30,4 +27,13 @@ module VSCinemas
   end
 
   alias films movies
+
+  # Return Comings Movie List
+  #
+  # @return [VSCinemas::MovieList]
+  #
+  # @since 0.2.0
+  def coming
+    MovieList.new(type: 'coming', continue: true)
+  end
 end

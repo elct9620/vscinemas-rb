@@ -32,6 +32,16 @@ movies.each do |movie|
 end
 ```
 
+### Get Coming Movies
+
+```ruby
+movies = VSCinemas.coming
+movies.each do |movie|
+  puts "Title: #{movie.title}"
+  puts "Release Date: #{movie.date}"
+end
+```
+
 ### Specify Page
 
 ```ruby
@@ -44,7 +54,7 @@ end
 ## Roadmap
 
 * [x] Playing Movies
-* [ ] Coming Movies
+* [x] Coming Movies
 * [ ] Movie Detail
   * [ ] Description
   * [ ] Playing Version

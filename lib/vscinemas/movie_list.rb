@@ -8,13 +8,15 @@ module VSCinemas
     include Enumerable
 
     # @since 0.1.0
-    attr_reader :page, :continue
+    attr_reader :type, :page, :continue
 
+    # @param type [String] the list type film or coming
     # @param page [Number]
     # @param continue [Boolean]
     #
     # @since 0.1.0
-    def initialize(page: 1, continue: false)
+    def initialize(type: 'film', page: 1, continue: false)
+      @type = type
       @page = page
       @continue = continue
     end
@@ -42,7 +44,7 @@ module VSCinemas
     #
     # @since 0.1.0
     def uri
-      @uri ||= URI("#{ENDPOINT}#{PATH}?p=#{page}")
+      @uri ||= URI("#{ENDPOINT}/vsweb/film/#{@type == 'coming' ? 'coming' : 'index'}.aspx?p=#{page}")
     end
 
     # Downloaded Web Page
